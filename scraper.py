@@ -13,7 +13,6 @@ def get_citations_needed_count(url):
         citations_needed.append(anchor.find('span',text="citation needed").text.strip())
     return(len(citations_needed))
 
-
 def get_citations_needed_report(url):
     page = requests.get(url)
     soup = BeautifulSoup(page.content,'html.parser')
